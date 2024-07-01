@@ -41,11 +41,33 @@ int* wsort(int* array){
     return new_array;
 }
 
+void BubbleSort (int arr [], int n) {
+    int i;
+    int j;
+    for (i = 0; i < n-1; i++){
+        for (j = 0; j < n - i - 1; j++){
+            if (arr[j] > arr[j+1]){
+                swap (arr[j], arr[j+1]);
+            }
+        }
+    }
+}
+void PrintArray (int arr [], int size) {
+    int i;
+    for (i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
 int main(){
-    int array[] = {521,42232,31,23231,-11};
+    /*int array[] = {521,42232,31,23231,-11};
     int* arr = wsort(array);
     for(int i = 0; i < 5; i++){
         cout << arr[i] << " " ;
     }
-    cout << endl;
+    cout << endl;*/
+    int arr [] = {15, 5, 20, 90, 31};
+    int len = 5;
+    BubbleSort(arr, 5);
+    PrintArray(arr, 5);
 }
