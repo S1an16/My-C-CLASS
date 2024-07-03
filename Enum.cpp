@@ -3,20 +3,8 @@
 //
 #include <iostream>
 #include <string>
+#include <Enum.h>
 using namespace std;
-typedef enum Engine_Type{
-   Petrol,
-   Diesel,
-   Hybrid,
-   Electric
-} Engine_Type;
-
-typedef struct cars {
-    string name;
-    double price;
-    Engine_Type engine;
-    int seats;
-} Car;
 
 void setValue(Car& car, string name, int price, Engine_Type engine, int seats){
     car. name = name;
