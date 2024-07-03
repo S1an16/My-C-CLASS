@@ -1,8 +1,8 @@
-main : sort.o
-	g++ test.cpp sort.o -o exe.out
+main : enum.o
+	g++ test.cpp enum.o -o exe.out
 
-sort.o :
-	g++ sort.cpp -c
+enum.o :
+	g++ enum.cpp -c
 
 clean :
 	rm *.o *.out
