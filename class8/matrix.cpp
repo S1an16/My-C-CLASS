@@ -43,6 +43,14 @@ void Matrix::addMatrix(Matrix &B) {
     }
 }
 
+void Matrix::operator+(Matrix &B){
+    for (int i = 0; i < row; i++){
+        for (int j = 0; j < col; j++){
+            arr[i][j] += B.getValue(i, j);
+        }
+    }
+}
+
 int Matrix::getValue(int row, int col) {
     return arr[row][col];
 }

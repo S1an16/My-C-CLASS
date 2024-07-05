@@ -24,4 +24,6 @@ class Matrix{
         int getValue(int row, int col);
 
         void addMatrix(Matrix& B);
+
+        void operator+(Matrix& B);
 };
