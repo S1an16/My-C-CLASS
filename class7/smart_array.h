@@ -13,8 +13,10 @@ class Smart_Array{
         int setItem(int index, int value);
         int getLength();
         void printArray(); // {1,2,3,4} -> [1,2,3,4,5]
+        ~Smart_Array();
+        Smart_Array();
         Smart_Array(int length);
         Smart_Array(int length, int initial_value);
-        Smart_Array(const Smart_Array& other);
-} // Smart_Array a(5);
+        Smart_Array(Smart_Array& other);
+};
 #endif
