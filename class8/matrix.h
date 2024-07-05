@@ -6,8 +6,8 @@ class Matrix{
     
     private:
         int** arr;
-        int length_row;
-        int length_column;
+        int row;
+        int col;
     
     public:
 
@@ -24,4 +24,4 @@ class Matrix{
         int getValue(int row, int col);
 
         void addMatrix(Matrix& B);
-}
+};
