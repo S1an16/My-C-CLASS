@@ -11,7 +11,8 @@ class Smart_Array{ // class
         int length; // private instance variable
         int* arr;
     public :
-        int& operator[](int index); // member function
+		static int NUM_INSTANCE;
+		int& operator[](int index); // member function
         int& operator[](double index); // Phishing
 		int getItem(int index);
         int setItem(int index, int value);

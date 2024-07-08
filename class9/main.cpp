@@ -9,8 +9,9 @@
 using namespace std;
 
 
+	Smart_Array::NUM_INSTANCE = 0;
 int main(){
-    Smart_Array smartArrayA(5, 58);
+	Smart_Array smartArrayA(5, 58);
     Smart_Array smartArrayB(smartArrayA);
     smartArrayB[0] = 114514;
 

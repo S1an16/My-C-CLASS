@@ -4,16 +4,19 @@
 using namespace std;
 
 Smart_Array::Smart_Array(){
-    arr = new int[10];
+	NUM_INSTANCE ++;
+	arr = new int[10];
     length = 10;
 }
 
 Smart_Array::Smart_Array(int length){
-    this->length = length;
+    NUM_INSTANCE ++;
+	this->length = length;
     arr = new int[length];
 }
 Smart_Array::Smart_Array(int length, int value) {
-    this->length = length;
+    NUM_INSTANCE ++;
+	this->length = length;
     arr = new int [length];
     for (int i = 0; i < length; i++){
         arr[i] = value;
