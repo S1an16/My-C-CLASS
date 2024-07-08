@@ -23,6 +23,9 @@ Smart_Array::Smart_Array(int length, int value) {
 int Smart_Array::getItem(int index){
     return arr[index];
 }
+int& Smart_Array::operator[](int index) {
+    return arr[index];
+}
 
 int Smart_Array::setItem(int index, int value){
     int temp = arr[index];
@@ -35,7 +38,7 @@ int Smart_Array::getLength(){
 }
 
 Smart_Array::~Smart_Array(){
-    delete arr;
+    delete []arr;
 }
 
 void Smart_Array::printArray (){
@@ -48,6 +51,19 @@ void Smart_Array::printArray (){
     }
     cout << "]" << endl;
 }
+
+ostream& operator << (ostream& os, Smart_Array& sa){
+    os << "[";
+    for (int i = 0; i < sa.length; i++){
+        os << sa.arr[i];
+        if(i != sa.length-1){
+            os << ",";
+        }
+    }
+    os << "]" ;
+    return os;
+}
+
 
 Smart_Array::Smart_Array(Smart_Array& other) {
     this->length = other.length;
