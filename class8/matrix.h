@@ -26,4 +26,7 @@ class Matrix{
         void addMatrix(Matrix& B);
 
         void operator+(Matrix& B);
+        void operator-(Matrix& B);
+        int operator[](int row);
+
 };

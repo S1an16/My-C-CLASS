@@ -50,10 +50,18 @@ void Matrix::operator+(Matrix &B){
         }
     }
 }
-
+void Matrix::operator-(Matrix &B){
+    for (int i = 0; i < row; i++){
+        for (int j = 0; j < col; j++){
+            arr[i][j]-= B.getValue(i,j);
+        }
+    }
+}
 int Matrix::getValue(int row, int col) {
     return arr[row][col];
 }
+
+
 Matrix::~Matrix(){
     for (int i = 0; i < row; i++){
         delete[] arr[i];
@@ -61,7 +69,6 @@ Matrix::~Matrix(){
     delete[] arr;
     // 1 2 3 4
     // 2 3 4 5
-
 }
 
 

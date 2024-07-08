@@ -11,9 +11,8 @@ int main (){
     cout << endl;
     b1.printMatrix();
     cout << endl;
-    a1+b1;
+    a1-b1;
     cout << endl;
     a1.printMatrix();
     cout << endl;
-
 }
