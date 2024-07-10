@@ -9,13 +9,19 @@
 using namespace std;
 
 
-	Smart_Array::NUM_INSTANCE = 0;
+	//Smart_Array::NUM_INSTANCE = 0;
 int main(){
-	Smart_Array smartArrayA(5, 58);
-    Smart_Array smartArrayB(smartArrayA);
-    smartArrayB[0] = 114514;
+	Smart_Array* smartArrayA = new Smart_Array(1, 58);
 
-	cout << smartArrayB << endl;
+    Smart_Array smartArrayB(*smartArrayA);
+    cout<<Smart_Array::NUM_INSTANCE<<endl;
+
+    delete smartArrayA;
+
+    cout<<Smart_Array::NUM_INSTANCE<<endl;
+    // smartArrayB[0] = 114514;
+
+	// cout << smartArrayB << endl;
 
 	// Instance smart_arrayA
     // Class Smart_Array

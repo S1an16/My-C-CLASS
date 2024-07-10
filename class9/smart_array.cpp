@@ -3,6 +3,8 @@
 #include <exception>
 using namespace std;
 
+int Smart_Array::NUM_INSTANCE = 0;
+
 Smart_Array::Smart_Array(){
 	NUM_INSTANCE ++;
 	arr = new int[10];
@@ -10,11 +12,18 @@ Smart_Array::Smart_Array(){
 }
 
 Smart_Array::Smart_Array(int length){
+    if (length <= 0){
+        throw out_of_range ("You entered a wrong length");
+    }
     NUM_INSTANCE ++;
 	this->length = length;
     arr = new int[length];
 }
+
 Smart_Array::Smart_Array(int length, int value) {
+    if (length <= 0){
+        throw out_of_range ("You entered a wrong length");
+    }
     NUM_INSTANCE ++;
 	this->length = length;
     arr = new int [length];
@@ -40,6 +49,9 @@ int& Smart_Array::operator[](double index) {
 	throw out_of_range("You entered a wrong datatype!");
 }
 int Smart_Array::setItem(int index, int value){
+    if (index >= length || index < 0){
+        throw out_of_range("You entered a wrong index!");
+    }
     int temp = arr[index];
     arr[index] = value;
     return temp ;
@@ -51,6 +63,7 @@ int Smart_Array::getLength(){
 
 Smart_Array::~Smart_Array(){
     delete []arr;
+    NUM_INSTANCE--;
 }
 
 void Smart_Array::printArray (){
@@ -78,6 +91,7 @@ ostream& operator << (ostream& os, Smart_Array& sa){
 
 
 Smart_Array::Smart_Array(Smart_Array& other) {
+    NUM_INSTANCE++;
     this->length = other.length;
     arr = new int [length];
     for (int i = 0; i < length; i++){
