@@ -11,3 +11,9 @@
 
 // Gamer::Gamer(){
 // }
+Gamer::Gamer(std::string best_char, double win_per, std::string name, int age, int id) {
+
+}
+void Gamer::shout() {
+    cout<< shout_message;
+}

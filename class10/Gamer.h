@@ -8,6 +8,7 @@
 class Gamer : public People{
     public:
         string best_character;
+        string shout_message;
         double win_percent;
         Gamer(string best_char, double win_per, string name, int age, int id){
             People(name, age, id);
@@ -15,6 +16,8 @@ class Gamer : public People{
             win_percent = win_per;
             
         }
+        void shout();
+
 };
 
 #endif
