@@ -12,7 +12,8 @@
 // Gamer::Gamer(){
 // }
 Gamer::Gamer(std::string best_char, double win_per, std::string name, int age, int id) {
-
+    Gamer::best_character = best_char;
+    Gamer::win_percent = win_per;
 }
 void Gamer::shout() {
     cout<< shout_message;
