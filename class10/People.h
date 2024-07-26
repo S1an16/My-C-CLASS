@@ -1,7 +1,7 @@
 #include <string>
 
-#ifndef people
-#define people
+#ifndef PEOPLE
+#define PEOPLE
 
 
 using namespace std;
@@ -28,11 +28,12 @@ class People{
         int getID();
         string getName();
         
-        static int TOTAL_PEOPLE;
+  //      static int TOTAL_PEOPLE;
 
         void setUnderwear(Color temp);
         void setMoney(double temp);
         void setAge(int temp);
+        virtual void greeting();
         People();
         People(string name, int age);
         People(string name, int age, int id);

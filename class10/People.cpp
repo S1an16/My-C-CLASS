@@ -1,6 +1,6 @@
 #include <iostream>
 #include "People.h"
-
+using namespace std;
 Color People::getUnderwear() {
    return underwear;
 }
@@ -30,23 +30,27 @@ void People::setAge(int temp) {
 }
 
 People::People() {
-    id = TOTAL_PEOPLE;
-    name = "People" + id;
+ //   id = TOTAL_PEOPLE;
+    //name = "People" + id;
     age = 0;
 }
 People::People(std::string name, int age) {
-    TOTAL_PEOPLE++;
+ //   TOTAL_PEOPLE++;
     this -> name = name;
     this -> age = age;
 }
 
 People::People(std::string name, int age, int id) {
-    TOTAL_PEOPLE++;
+ //   TOTAL_PEOPLE++;
     this -> name = name;
     this -> age = age;
     this -> id = id;
 }
 
 People::~People (){
-    TOTAL_PEOPLE--;
+//    TOTAL_PEOPLE--;
+}
+
+void People::greeting() {
+    cout<<"Hi, nice to meet you!"<<endl;
 }

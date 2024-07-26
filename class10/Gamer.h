@@ -1,7 +1,7 @@
 #include<string>
 
-#ifndef gamer
-#define gamer
+#ifndef GAMER
+#define GAMER
 
 #include "People.h"
 
@@ -10,14 +10,9 @@ class Gamer : public People{
         string best_character;
         string shout_message;
         double win_percent;
-        Gamer(string best_char, double win_per, string name, int age, int id){
-            People(name, age, id);
-            best_character = best_char;
-            win_percent = win_per;
-            
-        }
         void shout();
-
+        void greeting();
+        void game();
 };
 
 #endif

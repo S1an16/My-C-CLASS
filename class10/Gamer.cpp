@@ -8,13 +8,14 @@
 #include<iostream>
 #include "Gamer.h"
 #include "People.h"
+using namespace std;
 
-// Gamer::Gamer(){
-// }
-Gamer::Gamer(std::string best_char, double win_per, std::string name, int age, int id) {
-    Gamer::best_character = best_char;
-    Gamer::win_percent = win_per;
+void Gamer::greeting() {
+    cout<<"Hi"<<endl;
 }
 void Gamer::shout() {
     cout<< shout_message;
+}
+void Gamer::game(){
+    cout<<"赢"<<endl;
 }
