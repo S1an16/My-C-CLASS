@@ -16,14 +16,14 @@ class Smart_Array{ // class
 		int& operator[](int index); // member function
         int& operator[](double index); // Phishing
 		int getItem(int index);
-        int setItem(int index, int value);
+        T setItem(int index, T value);
         int getLength();
         friend std::ostream& operator<<(std::ostream& os, Smart_Array& sa); // friend function
         void printArray(); // {1,2,3,4} -> [1,2,3,4,5]
         ~Smart_Array();
         Smart_Array();
         Smart_Array(int length);
-        Smart_Array(int length, int initial_value);
+        Smart_Array(int length, T initial_value);
         Smart_Array(Smart_Array& other);
 };
 

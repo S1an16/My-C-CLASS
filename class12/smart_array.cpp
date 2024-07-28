@@ -2,12 +2,12 @@
 #include <iostream>
 #include <exception>
 using namespace std;
-
-int Smart_Array::NUM_INSTANCE = 0;
+template<class T>
+T Smart_Array::NUM_INSTANCE = 0;
 
 Smart_Array::Smart_Array(){
 	NUM_INSTANCE ++;
-	arr = new int[10];
+	arr = new T [10];
     length = 10;
 }
 
@@ -20,7 +20,7 @@ Smart_Array::Smart_Array(int length){
     arr = new int[length];
 }
 
-Smart_Array::Smart_Array(int length, int value) {
+Smart_Array::Smart_Array(int length, T value) {
     if (length <= 0){
         throw out_of_range ("You entered a wrong length");
     }
@@ -48,7 +48,7 @@ int& Smart_Array::operator[](int index) {
 int& Smart_Array::operator[](double index) {
 	throw out_of_range("You entered a wrong datatype!");
 }
-int Smart_Array::setItem(int index, int value){
+int Smart_Array::setItem(int index, T value){
     if (index >= length || index < 0){
         throw out_of_range("You entered a wrong index!");
     }
