@@ -63,6 +63,7 @@ class mutArray{
         }
 };
 
-int main(){
-
-}
+//int main(){
+//    mutArray a;
+//    a.length = 10;
+//}
